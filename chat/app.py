@@ -36,7 +36,7 @@ def run_app():
             pass
 
     # we need socketio.run() instead of app.run() bc we need to use the eventlet server
-    socketio.run(app, port=port, debug=True, use_reloader=True)
+    socketio.run(app, host="0.0.0.0", port=port, debug=False)
 
 
 # this was rewritten from decorators so we can move this methods to another file
